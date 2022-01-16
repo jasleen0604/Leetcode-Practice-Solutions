@@ -26,9 +26,11 @@ class Solution {
             return false;
         
         boolean r1 = isMirror(n1.left, n2.right);
+        if(r1 == false)
+            return false;
         boolean r2 = isMirror(n1.right, n2.left);
         
-        if(r1 == false || r2 == false)
+        if(r2 == false)
             return false;
         
         return true;
