@@ -18,14 +18,14 @@ class Solution {
     public int diameter(TreeNode root)
     {
         if(root == null)
-        return -1;
+        return 0;
 
         int lh = diameter(root.left);
         int rh = diameter(root.right);
         int ht = Math.max(lh, rh) + 1;
 
-        if(maxDia < (lh + rh + 2))
-        maxDia = lh + rh + 2;
+        if(maxDia < (lh + rh))
+        maxDia = lh + rh;
 
         return ht;
     }
