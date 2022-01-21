@@ -26,14 +26,6 @@ class Solution {
           BSTPair base = new BSTPair();
           return base;
         }
-        // if(node.left == null && node.right == null)
-        // {
-        //   BSTPair base = new BSTPair();
-        //   base.min = node.val;
-        //   base.max = node.val;
-        //   base.isbst = true;
-        //   return base;
-        // }
 
         BSTPair lp = isBST(node.left);
         BSTPair rp = isBST(node.right);
