@@ -31,6 +31,7 @@ class Solution {
     }
     public TreeNode bstToGst(TreeNode root) {
         sum = 0;
-        return helper(root);
+        helper(root);
+        return root;
     }
 }
