@@ -4,11 +4,8 @@ class Solution {
         HashMap<String,Integer> hm = new HashMap<>();
         StringBuilder sb = new StringBuilder(s.substring(0, minSize));
         int max = 0;
-        if(getUniqueLetterCount(sb.toString()) <= maxLetters)
-        {
+
         hm.put(sb.toString(),1);
-        max = 1;
-        }
         
         for(int i=minSize; i<s.length(); i++)
         {
