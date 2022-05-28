@@ -24,13 +24,13 @@ class Solution {
         }
         return max;
     }
-    public int getUniqueLetterCount(String s)
+    public int getUniqueLetterCount(String str)
     {
-        HashSet<Character> hs = new HashSet<>();
-        for(int i=0; i<s.length(); i++)
-        {
-            hs.add(s.charAt(i));
+        int[] freq = new int[26];
+        int ans = 0;
+        for(int i=0;i<str.length();i++){
+            if(freq[str.charAt(i) - 'a']++ == 0)ans++;
         }
-        return hs.size();
+        return ans;
     }
 }
