@@ -14,12 +14,13 @@ class Solution {
         {
             sb.deleteCharAt(0);
             sb.append(s.charAt(i));
-            int uniqueCnt = getUniqueLetterCount(sb.toString());
+            String currStr = sb.toString();
+            int uniqueCnt = getUniqueLetterCount(currStr);
             
             if(uniqueCnt <= maxLetters)
             {
-                hm.put(sb.toString(), hm.getOrDefault(sb.toString(),0)+1);
-                max = Math.max(hm.get(sb.toString()), max); 
+                hm.put(currStr, hm.getOrDefault(currStr,0)+1);
+                max = Math.max(hm.get(currStr), max); 
             }  
         }
         return max;
